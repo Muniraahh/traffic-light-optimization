@@ -2,11 +2,17 @@
 import React from 'react';
 import Dashboard from './components/Dashboard';
 import './App.css';
+import { EntryPoint } from './components/EntryPoint';
+import Routers from './components/Routers';
 
 function App() {
     return (
         <div className="App">
-            <Dashboard />
+            <Routers />
+            {/* <EntryPoint /> */}
+            
+            {/* <Dashboard /> */}
+
         </div>
     );
 }
