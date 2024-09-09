@@ -32,9 +32,11 @@ export const FileUpload = ({
   const fileInputRef = useRef(null);
 
   const handleFileChange = (newFiles) => {
-    setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-    onChange && onChange(newFiles);
-  };
+    const selectedFile = newFiles[0]; // Only use the first file since it's a single file input
+    setFiles([selectedFile]); // Update the state with the selected file
+    onChange && onChange(selectedFile); // Pass only the first file to the parent component
+};
+
 
   const handleClick = () => {
     fileInputRef.current?.click();
